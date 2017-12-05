@@ -1,0 +1,66 @@
+
+# coding: utf-8
+
+# In[43]:
+
+
+import pandas as pd
+df = pd.read_csv('nflfinalfinals.csv')
+
+
+# In[73]:
+
+
+df.head()
+
+
+# In[45]:
+
+
+import matplotlib.pyplot as plt
+get_ipython().magic('matplotlib inline')
+from mpl_toolkits.axes_grid.axislines import Subplot
+from matplotlib.ticker import FuncFormatter
+
+
+# In[66]:
+
+
+data_frame = df[df.DemAsian !=6364]
+
+
+# In[67]:
+
+
+data_frame.DemTotal.mean()
+
+
+# In[68]:
+
+
+data_frame.RepTotal.mean()
+
+
+# In[69]:
+
+
+data_frame.IndTotal.mean()
+
+
+# In[70]:
+
+
+data_frame.DemTotal.quantile([0.01, 0.25, 0.50, 0.75, 0.90])
+
+
+# In[71]:
+
+
+data_frame.RepTotal.quantile([0.01, 0.25, 0.50, 0.75, 0.90])
+
+
+# In[72]:
+
+
+data_frame.IndTotal.quantile([0.01, 0.25, 0.50, 0.75, 0.90])
+
